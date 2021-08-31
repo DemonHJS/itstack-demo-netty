@@ -14,6 +14,11 @@ import java.util.Date;
  */
 public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
+    /**
+     * 通道激活状态监听
+     * @param ctx
+     * @throws Exception
+     */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         SocketChannel channel = (SocketChannel) ctx.channel();
@@ -24,6 +29,11 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
         System.out.println("链接报告完毕");
     }
 
+    /**
+     * 通道数据读取
+     * @param ctx
+     * @param msg
+     */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         //接收msg消息{与上一章节相比，此处已经不需要自己进行解码}

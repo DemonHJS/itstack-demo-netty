@@ -5,8 +5,6 @@ import io.netty.channel.socket.SocketChannel;
 import org.itstack.demo.netty.codec.MyDecoder;
 import org.itstack.demo.netty.codec.MyEncoder;
 
-import java.nio.charset.Charset;
-
 /**
  * 虫洞栈：https://bugstack.cn
  * 公众号：bugstack虫洞栈  ｛关注获取学习源码｝

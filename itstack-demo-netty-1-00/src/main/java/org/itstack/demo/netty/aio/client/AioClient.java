@@ -15,11 +15,12 @@ public class AioClient {
 
     public static void main(String[] args) throws Exception {
         AsynchronousSocketChannel socketChannel = AsynchronousSocketChannel.open();
-        Future<Void> future = socketChannel.connect(new InetSocketAddress("192.168.1.116", 7397));
+        Future<Void> future = socketChannel.connect(new InetSocketAddress("172.18.70.190", 7397));
         System.out.println("itstack-demo-netty aio client start done. {关注公众号：bugstack虫洞栈 | 欢迎关注&获取源码}");
-        future.get();
+        Void unused = future.get();
         socketChannel.read(ByteBuffer.allocate(1024), null, new AioClientHandler(socketChannel, Charset.forName("GBK")));
         Thread.sleep(100000);
+        System.out.println("itstack-demo-netty aio client"+unused);
     }
 
 }

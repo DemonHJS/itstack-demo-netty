@@ -5,10 +5,10 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 /**
+ * 实现通道入站处理程序适配器
  * 虫洞栈：https://bugstack.cn
  * 公众号：bugstack虫洞栈  ｛获取学习源码｝
  * Create by fuzhengwei on 2019
