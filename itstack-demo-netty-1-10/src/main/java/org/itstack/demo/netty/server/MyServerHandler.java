@@ -6,7 +6,6 @@ import io.netty.channel.socket.SocketChannel;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 
 /**
  * 虫洞栈：https://bugstack.cn
@@ -28,7 +27,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
         System.out.println("链接报告完毕");
         //通知客户端链接建立成功
         String str = "通知客户端链接建立成功" + " " + new Date() + " " + channel.localAddress().getHostString() + "\r\n";
-        //ctx.writeAndFlush(str);
+        ctx.writeAndFlush(str);
     }
 
     /**

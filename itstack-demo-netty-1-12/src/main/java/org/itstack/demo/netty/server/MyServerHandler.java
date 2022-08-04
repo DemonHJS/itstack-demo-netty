@@ -5,12 +5,9 @@ import io.netty.buffer.EmptyByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.*;
 
 import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * 虫洞栈：https://bugstack.cn
@@ -35,7 +32,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
                 //接收msg消息
                 byte[] msgByte = new byte[byteData.readableBytes()];
                 byteData.readBytes(msgByte);
-                System.out.println(new String(msgByte, Charset.forName("UTF-8")));
+                System.out.println("msgByte:" + new String(msgByte, Charset.forName("UTF-8")));
             }
         }
 

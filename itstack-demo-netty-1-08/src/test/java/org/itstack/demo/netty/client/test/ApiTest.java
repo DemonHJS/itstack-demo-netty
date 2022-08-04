@@ -9,6 +9,15 @@ public class ApiTest {
 
     public static void main(String[] args) {
         System.out.println("hi 微信公众号：bugstack虫洞栈");
+        Long refreshTime = 60L * 10;
+        Long currentTime = System.currentTimeMillis() / 1000;
+
+        System.out.println(currentTime);
+        System.out.println(currentTime / refreshTime);
+        System.out.println((currentTime - 30) / refreshTime);
+        if (currentTime / refreshTime - (currentTime - 30) / refreshTime > 0) {
+            System.out.println("true");
+        }
     }
 
 }

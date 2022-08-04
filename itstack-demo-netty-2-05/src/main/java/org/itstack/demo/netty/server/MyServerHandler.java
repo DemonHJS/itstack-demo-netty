@@ -31,6 +31,9 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
     private Logger logger = LoggerFactory.getLogger(MyServerHandler.class);
 
+    /**
+     * webSocket服务基类
+     */
     private WebSocketServerHandshaker handshaker;
 
     /**

@@ -23,12 +23,15 @@ public class ObjDecoder extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) {
+        //readableBytes获取  writerIndex - readerIndex 可读区域大小
         if (in.readableBytes() < 4) {
             return;
         }
+        //标记readerIndex位置
         in.markReaderIndex();
         int dataLength = in.readInt();
         if (in.readableBytes() < dataLength) {
+            //重置readerIndex到 markReaderIndex位置
             in.resetReaderIndex();
             return;
         }

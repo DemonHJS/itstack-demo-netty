@@ -71,7 +71,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
                 break;
             case 2:
                 FileBurstData fileBurstData = (FileBurstData) fileTransferProtocol.getTransferObj();
-                FileBurstInstruct fileBurstInstruct = FileUtil.writeFile("E://", fileBurstData);
+                FileBurstInstruct fileBurstInstruct = FileUtil.writeFile("F://", fileBurstData);
 
                 //保存断点续传信息
                 CacheUtil.burstDataMap.put(fileBurstData.getFileName(), fileBurstInstruct);

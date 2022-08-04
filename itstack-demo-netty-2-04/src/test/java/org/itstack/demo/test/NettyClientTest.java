@@ -21,7 +21,7 @@ public class NettyClientTest {
         ChannelFuture channelFuture = new NettyClient().connect("127.0.0.1", 7397);
 
         //文件信息{文件大于1024kb方便测试断点续传}
-        File file = new File("C:\\Users\\fuzhengwei1\\Desktop\\测试传输文件.rar");
+        File file = new File("D:\\IdeaProjects\\Project-GitHub\\itstack-demo-netty\\itstack-demo-netty-2-04\\src\\test\\java\\org\\itstack\\demo\\test\\测试传输文件.rar");
         FileTransferProtocol fileTransferProtocol = MsgUtil.buildRequestTransferFile(file.getAbsolutePath(), file.getName(), file.length());
 
         //发送信息；请求传输文件
